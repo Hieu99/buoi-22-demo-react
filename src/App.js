@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Hearder from "./components/Header.jsx";
+import Menu from "./components/Menu.jsx";
+import Footer from "./components/Footer.jsx";
+import Data from "./components/Data.jsx";
+
+let data = "Header with props";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: "0 20px" }}>
+      <Hearder title={data} count={100} subContent="ABC"></Hearder>
+      <div
+        style={{
+          height: "500px",
+          display: "flex",
+          gap: "10px",
+          width: "100%",
+          padding: "10px 0",
+        }}
+      >
+        <Menu></Menu>
+        <Data></Data>
+      </div>
+      <Footer></Footer>
     </div>
   );
 }
